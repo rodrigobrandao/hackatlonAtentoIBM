@@ -1,0 +1,121 @@
+<html><head>
+    <title>Soluções Atento - Analytics</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="http://cloudco.mybluemix.net/stylesheets/style.css">
+    <link rel="stylesheet" href="http://cloudco.mybluemix.net/stylesheets/benefit.css">
+    <link rel="stylesheet" href="http://cloudco.mybluemix.net/stylesheets/ana.css">
+    <link rel="stylesheet" href="http://cloudco.mybluemix.net/stylesheets/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+</head>
+
+<body class="homePage" onload="getBenefits();">
+
+    <div class="healthContainer">
+
+            <header>
+                <div class="banner">
+                    <div class="titleArea">
+                        <div class="logo"><img width="76" height="76" src="https://github.com/rodrigobrandao/hackatlonAtentoIBM/blob/master/santander_96x96.png?raw=true"></div>
+                        <div class="name"></div>
+                    </div>
+                    <div class="loginArea">
+                        <div class="menu"><span class="menulink" href="./about">Antonio Carlos</span></div>
+                        <div id="login" class="menu" style="display: none;"><a class="menulink" href="./login">Logout</a></div>
+                        <div id="logout" class="menu"><a class="menulink" href="./logout">Logout</a></div>
+                        <div id="status"></div>
+                    </div>
+                    
+                </div>
+            </header>
+            <section class="healthLayout">
+
+                    <div class="benefitkit">
+                        <div class="benefitdata">
+                            <div id="header" class="header">Empréstimo Pessoal</div>
+                            <div id="owner" class="owner" style="display:none">xx@xx.com</div>
+                            <div class="healthTabArea">
+                              <div class="healthTab" onclick="selectBenefitsTab()"><span id="benefitsTabMenu" class="tabLink selected">INFORMAÇÕES BANCÁRIAS</span></div>
+                              <div class="healthTab" onclick="selectClaimTab()"><span id="claimTabMenu" class="tabLink">HISTÓRICO</span></div>
+                              
+                            </div>
+                            <div class="benefitset" id="benefitset">
+
+                            <div class="benefitTypeTitle">vision Benefits</div><div class="benefit"><div class="benefitblock"><div class="benefitcap"><div class="benefiticon"></div><div class="benefitTitle"></div></div><div id="vision" class="benefitrows"><div class="benefitrow"><div class="benefiticon"><img class="benefitimage" src="http://cloudco.mybluemix.net/images/health/eyewear.svg"></div><div class="benefitTitle">eye wear</div><div id="eye wear-ToggleTextOpen" class="benefitMenu" style="display: none;">View Benefit<i style="padding-left:10px" class="fa fa-angle-down" aria-hidden="true"></i></div><div id="eye wear-ToggleTextClose" class="benefitMenu" style="display: block;">View Benefit<i style="padding-left:10px" class="fa fa-angle-up" aria-hidden="true"></i></div></div><div class="benefitdetail" id="eye wear" style="display: flex;"><div class="benefitfacts"><div class="benefitfact"><div class="factlabel">benefit</div><div class="factcheck">Glasses, contact lens, laser treatment, etc</div></div><div class="benefitfact"><div class="factlabel">limit</div><div class="factcheck">$300</div></div><div class="benefitfact"><div class="factlabel">coverage</div><div class="factcheck">80%</div></div><div class="benefitfact"><div class="factlabel">term</div><div class="factcheck">bi-annual</div></div><div class="benefitfact"><div class="factlabel">start</div><div class="factcheck">Jan 1 2016</div></div><div class="benefitfact"><div class="factlabel">end</div><div class="factcheck">Dec 31 2017</div></div><div class="benefitfact"><div class="factlabel">code</div><div class="factcheck">100</div></div></div></div>
+                            
+                            <div class="benefitdetail" id="eye exam"><div class="benefitfacts"><div class="benefitfact"><div class="factlabel">limit</div><div class="factcheck">$100</div></div><div class="benefitfact"><div class="factlabel">coverage</div><div class="factcheck">100%</div></div><div class="benefitfact"><div class="factlabel">term</div><div class="factcheck">bi-annual</div></div><div class="benefitfact"><div class="factlabel">start</div><div class="factcheck">Jan 1 2016</div></div><div class="benefitfact"><div class="factlabel">end</div><div class="factcheck">Dec 31 2017</div></div><div class="benefitfact"><div class="factlabel">code</div><div class="factcheck">200</div></div></div></div></div><div class="benefitcap"><div class="benefiticon"></div><div class="benefitTitle"></div></div></div></div>
+                            
+                            <div class="benefitTypeTitle">dental Benefits</div><div class="benefit"><div class="benefitblock"><div class="benefitcap"><div class="benefiticon"></div><div class="benefitTitle"></div></div><div id="dental" class="benefitrows"><div class="benefitrow"><div class="benefiticon"><img class="benefitimage" src="http://cloudco.mybluemix.net/images/health/toothbrush.svg"></div><div class="benefitTitle">teeth cleaning</div><div id="teeth cleaning-ToggleTextOpen" class="benefitMenu">View Benefit<i style="padding-left:10px" class="fa fa-angle-down" aria-hidden="true"></i></div><div id="teeth cleaning-ToggleTextClose" class="benefitMenu" style="display:none">Close Benefit<i style="padding-left:10px" class="fa fa-angle-up" aria-hidden="true"></i></div></div><div class="benefitdetail" id="teeth cleaning"><div class="benefitfacts"><div class="benefitfact"><div class="factlabel">benefit</div><div class="factcheck">Teeth Cleaning</div></div><div class="benefitfact"><div class="factlabel">limit</div><div class="factcheck">$500</div></div><div class="benefitfact"><div class="factlabel">coverage</div><div class="factcheck">75%</div></div><div class="benefitfact"><div class="factlabel">term</div><div class="factcheck">annual</div></div><div class="benefitfact"><div class="factlabel">start</div><div class="factcheck">Jan 1 2016</div></div><div class="benefitfact"><div class="factlabel">end</div><div class="factcheck">Dec 31 2017</div></div><div class="benefitfact"><div class="factlabel">code</div><div class="factcheck">300</div></div></div></div><div class="benefitrow"><div class="benefiticon"><img class="benefitimage" src="http://cloudco.mybluemix.net/images/health/braces.svg"></div><div class="benefitTitle">orthodontics</div><div id="orthodontics-ToggleTextOpen" class="benefitMenu">View Benefit<i style="padding-left:10px" class="fa fa-angle-down" aria-hidden="true"></i></div><div id="orthodontics-ToggleTextClose" class="benefitMenu" style="display:none">Close Benefit<i style="padding-left:10px" class="fa fa-angle-up" aria-hidden="true"></i></div></div><div class="benefitdetail" id="orthodontics"><div class="benefitfacts"><div class="benefitfact"><div class="factlabel">benefit</div><div class="factcheck">Orthodontics</div></div><div class="benefitfact"><div class="factlabel">limit</div><div class="factcheck">$2000</div></div><div class="benefitfact"><div class="factlabel">coverage</div><div class="factcheck">80%</div></div><div class="benefitfact"><div class="factlabel">term</div><div class="factcheck">lifetime</div></div><div class="benefitfact"><div class="factlabel">start</div><div class="factcheck">Jan 1 2016</div></div><div class="benefitfact"><div class="factlabel">end</div><div class="factcheck">Dec 31 2017</div></div><div class="benefitfact"><div class="factlabel">code</div><div class="factcheck">400</div></div></div></div><div class="benefitdetail" id="tooth repair"><div class="benefitfacts"><div class="benefitfact"><div class="factlabel">benefit</div><div class="factcheck">Teeth repair - fillings, chipped teeth</div></div><div class="benefitfact"><div class="factlabel">limit</div><div class="factcheck">$2000</div></div><div class="benefitfact"><div class="factlabel">coverage</div><div class="factcheck">80%</div></div><div class="benefitfact"><div class="factlabel">term</div><div class="factcheck">annual</div></div><div class="benefitfact"><div class="factlabel">start</div><div class="factcheck">Jan 1 2016</div></div><div class="benefitfact"><div class="factlabel">end</div><div class="factcheck">Dec 31 2017</div></div><div class="benefitfact"><div class="factlabel">code</div><div class="factcheck">500</div></div></div></div></div><div class="benefitcap"><div class="benefiticon"></div><div class="benefitTitle"></div></div></div></div></div>
+                            <div id="claimTab" class="claimTab" style="display:none">
+                              <div id="chatSubmit" class="interactionsub"></div>
+
+                              <div class="claimbox">
+                                  <div class="claimrow">
+                                      <label class="claimlabel">Date</label>
+                                      <input id="claimdate" type="date" class="claiminput">
+                                  </div>
+                                  <div class="claimrow">
+                                      <label class="claimlabel">Benefit</label>
+                                      <select id="benefittypes" class="claiminput">
+                                      <option value="eye wear">eye wear</option><option value="eye exam">eye exam</option><option value="teeth cleaning">teeth cleaning</option><option value="orthodontics">orthodontics</option><option value="tooth repair">tooth repair</option><option value="psychologist">psychologist</option><option value="chiropractor">chiropractor</option><option value="physiotherapy">physiotherapy</option></select>
+                                  </div>
+                                  <div class="claimrow">
+                                      <label class="claimlabel">Provider</label>
+                                      <input id="provider" class="claiminput">
+                                  </div>
+                                  <div class="claimrow">
+                                      <label class="claimlabel">Amount ($)</label>
+                                      <input id="claimamount" type="number" class="claiminput">
+                                  </div>
+                              </div>
+                              <div class="claimcontrols">
+                                  <button class="claimbutton" onclick="submitClaim()">Claim</button>
+                              </div>
+
+                              <div class="claimmessages" id="claimmessages"></div>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="chatbot">
+                        <div class="anaBanner">Pesquisar contato</div>
+                        <div id="chatBox" class="dialogcontainer">
+                            
+                            <div class="message">
+                                <div class="anaTitle">AtentoBot | 19:30</div>
+                                <div class="ana">Informe o CPF do contato</div>
+                            </div>                            
+                            <div class="message">
+                                <div class="userTitle">Analista | 19:31</div>
+                                <div class="user">201.291.231-63</div>
+                            </div>
+
+                            <div class="message">
+                                <div class="anaTitle">AtentoBot | 19:31</div>
+                                <div class="ana">Aguarde, estamos analisando o histórico do contato em tempo real..</div>
+                            </div>
+
+                            <div class="message">
+                                <div class="anaTitle">AtentoBot | 19:31</div>
+                                <div class="ana">Pronto! Terminamos análise, boa negociação</div>
+                            </div>
+                            
+                        </div>
+                        <input type="text" id="chatMessage" class="dialoginput" placeholder="Digite sua mensagem " onkeypress="return newEvent(event)">
+
+
+                    </div>
+
+
+            </section>
+
+    </div>
+
+
+<script src="http://cloudco.mybluemix.net/src/cloudco.js"></script>
+<script src="http://cloudco.mybluemix.net/src/ana.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment.min.js"></script>
+
+
+</body></html>
